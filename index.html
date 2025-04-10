@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR & Barcode Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scanner-container">
+        <h1>QR & Barcode Scanner</h1>
+        <div class="scanner">
+            <video id="scanner-video" playsinline></video>
+            <div class="scan-overlay"></div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="btn">Start Scanner</button>
+            <button id="stop-btn" class="btn" disabled>Stop Scanner</button>
+            <button id="toggle-flash" class="btn" disabled>Toggle Flash</button>
+            <select id="camera-select" class="btn" disabled>
+                <option value="">Select Camera</option>
+            </select>
+        </div>
+        <div class="results">
+            <h2>Scan Results</h2>
+            <div id="result-content">No scan results yet</div>
+            <div id="result-type"></div>
+            <button id="copy-btn" class="btn" disabled>Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <script src="app.js"></script>
+</body>
+</html>
